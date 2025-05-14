@@ -16,6 +16,7 @@
 body {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .main-container {
@@ -30,18 +31,18 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 0;
 }
 
 .logo img {
   width: 100%;
-  height: 30px;
+  height: 25px;
 }
 
 .nav-bar ul {
   display: flex;
   justify-content: space-between;
-  margin-top: -18px;
+  margin: 0;
 }
 
 .nav-bar ul li {
@@ -50,18 +51,23 @@ body {
   position: relative;
 }
 
+.nav-bar ul li a {
+  display: block;
+  padding: 20px 0;
+}
+
 .nav-bar ul li:hover {
-  color: rgb(0, 153, 255);
+  color: #0065fc;
 }
 
 .nav-bar ul li:hover::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: 4px;
-  background-color: blue;
+  height: 2px;
+  background-color: #0065fc;
 }
 
 .info-group {
@@ -81,14 +87,22 @@ body {
 .search-bar {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  width: 377px;
+  height: 49px;
+  gap: 24px;
+  border-radius: 15px;
+  border: 1px solid #f2f2f2;
 }
 
 .search-bar i {
+  width: 50px;
+  height: 49px;
   background-color: #f2f2f2;
-  padding: 13px 15px 13px 18px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
 }
 
@@ -96,7 +110,7 @@ body {
   text-align: center;
   background-color: #ffffff1f;
   padding: 12px;
-  border: 1px solid rgb(241, 241, 241);
+  border: none;
 }
 
 input:focus {
@@ -106,40 +120,51 @@ input:focus {
 input::placeholder {
   font-weight: bold;
   color: black;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .search-bar button {
-  padding: 13px;
-  background-color: blue;
+  background-color: #0065fc;
   color: white;
-  border: none;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border: 1px solid #0065fc;
   cursor: pointer;
   font-weight: 700;
+  font-size: 16px;
+  width: 132px;
+  height: 49px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .filters {
   display: flex;
-  justify-content: flex-start;
-  gap: 17px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 30px;
+  margin-right: 10px;
 }
 
 .filters h1 {
   font-size: 18px;
-  font-weight: 530;
+  font-weight: 700;
+}
+
+.filters-button {
+  display: flex;
+  margin-left: 10px;
+  gap: 15px;
 }
 
 .filters button {
-  padding: 12px;
+  padding: 10px 30px 10px 12px;
   border: 1px solid rgba(128, 128, 128, 0.407);
   border-radius: 30px;
   background: none;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -148,7 +173,7 @@ input::placeholder {
 }
 
 .filters button:hover {
-  background: rgba(0, 115, 255, 0.101);
+  background: #deebff;
 }
 
 .info-text {
@@ -173,17 +198,13 @@ input::placeholder {
 .hebergements-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 35px;
   margin-top: 33px;
-}
-
-.hebergements-cards a {
-  display: block;
 }
 
 .card img {
   width: 100%;
-  height: 120px;
+  height: 110px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -192,14 +213,16 @@ input::placeholder {
 .hebergements-title h2 {
   margin: 0;
   font-size: 22px;
+  font-weight: 700;
 }
 
 .card-content {
-  margin-top: -8px;
+  padding-left: 10px;
 }
 
 .card-content h2 {
   font-size: 16px;
+  margin: 10px 0;
 }
 
 .card-content p {
@@ -208,15 +231,15 @@ input::placeholder {
 }
 
 .show-more {
-  margin-top: -6px;
-  margin-bottom: -25px;
-  margin-left: -10px;
+  font-size: 19px;
+  margin: 0;
   text-align: left;
 }
 
 .activities {
-  max-width: 1270px;
+  max-width: 95%;
   margin: 0 auto;
+  padding: 30px;
 }
 
 .activities .spot {
@@ -243,11 +266,6 @@ input::placeholder {
 .card-activity p {
   padding: 10px;
   font-weight: 600;
-}
-
-.activities h1 {
-  margin-top: 70px;
-  margin-bottom: 40px;
 }
 
 a {
@@ -322,6 +340,7 @@ a {
   height: 136px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  border-top-right-radius: 0;
 }
 
 .populaires-cards .card-content {
@@ -381,25 +400,6 @@ footer .info {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
-/******** Desktop **********/
-@media (max-width: 1430px) {
-  .activities {
-    max-width: 1250px;
-  }
-}
-
-@media (max-width: 1380px) {
-  .activities {
-    max-width: 1100px;
-  }
-}
-
-@media (max-width: 1260px) {
-  .activities {
-    max-width: 1000px;
-    margin-top: -15px;
-  }
-}
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
@@ -438,26 +438,19 @@ footer .info {
     display: grid;
   }
 
-  .filters .filters-button {
-    margin-top: -10px;
-  }
-
-  .activities {
-    max-width: 850px;
-    margin-top: -30px;
-  }
-
   .activities .spot img {
     height: 200px;
   }
 
   .card-activity p {
-    padding: 6px 10px;
-    font-size: 15px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0 5px 10px;
   }
 
   footer .info {
-    gap: 100px;
+    gap: 150px;
   }
 
   footer .info h3 {
@@ -466,18 +459,6 @@ footer .info {
 
   footer .info li {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .activities {
-    max-width: 800px;
-  }
-}
-
-@media (max-width: 950px) {
-  .activities {
-    max-width: 730px;
   }
 }
 
@@ -497,16 +478,18 @@ footer .info {
     align-items: center;
     text-align: center;
     gap: 30px;
+    margin-top: 10px;
   }
 
   header {
     position: relative;
+    margin-top: 30px;
   }
 
   header::after {
     content: "";
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     left: 0;
     right: 0;
     width: 100%;
@@ -517,9 +500,9 @@ footer .info {
   .nav-bar ul {
     display: flex;
     justify-content: space-around;
+    height: 40px;
     width: 100%;
     padding: 0;
-    margin: 0;
     font-size: 20px;
     text-align: center;
   }
@@ -537,7 +520,12 @@ footer .info {
     position: relative;
   }
 
-  .nav-bar ul li::before {
+  .nav-bar ul li a {
+    display: block;
+    padding: 0;
+  }
+
+  .nav-bar ul li:hover::before {
     display: none;
   }
 
@@ -546,11 +534,11 @@ footer .info {
     position: absolute;
     padding: 0;
     margin: 0;
-    bottom: -20px;
-    left: 50%;
+    bottom: 0px;
+    left: 45%;
     transform: translateX(-50%);
     width: 50vw;
-    height: 3px;
+    height: 2px;
     background-color: #0065fc;
   }
 
@@ -562,16 +550,17 @@ footer .info {
     max-width: 90%;
     font-size: 18px;
     margin-left: 20px;
-    margin-top: -20px;
   }
 
   .info-group h1 {
-    font-size: 27px;
-    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
   }
 
   .info-group p {
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
   }
 
   .search-bar {
@@ -587,11 +576,10 @@ footer .info {
   }
 
   .search-bar button {
-    width: 45px;
-    height: 45px;
+    width: 49px;
+    height: 49px;
     border-radius: 15px;
     padding: 0;
-    margin-left: -20px;
     font-size: 0;
     background-color: #0065fc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -618,6 +606,7 @@ footer .info {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 100%;
+    margin-left: 0;
   }
 
   .filters-button button {
@@ -641,12 +630,12 @@ footer .info {
   }
 
   .info-text i {
-    border: 1px solid rgba(128, 128, 128, 0.33);
+    border: 1px solid grey;
     width: 15px;
     height: 15px;
     border-radius: 100%;
-    padding: 5px 3px 3px 9px;
-    font-size: 14px;
+    padding: 4px 4px 9px 11px;
+    font-size: 18px;
   }
 
   .hebergements-and-populaires {
@@ -726,7 +715,7 @@ footer .info {
 
   .hebergements-cards img {
     width: 100%;
-    height: 125px;
+    height: 155px;
   }
 
   .hebergements-cards .card .card-content {
@@ -753,7 +742,7 @@ footer .info {
   }
 
   .activities {
-    margin: 0 45px;
+    margin: 0 15px;
   }
 
   .activities .spot {
@@ -795,13 +784,15 @@ footer .info {
     align-items: center;
     text-align: center;
   }
+}
 
-  .search-bar input {
-    width: 80%;
+@media (max-width: 490px) {
+  .filters-button button {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 382px) {
   .filters .filters-button {
     grid-template-columns: 1fr;
   }
